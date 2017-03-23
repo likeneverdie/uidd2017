@@ -1,0 +1,222 @@
+#TOP{
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+aside{
+    float:right;
+    width: 700px;
+    height: 0px;
+}
+
+ul {
+    list-style-type: none;
+    margin-top: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background-color: white;
+}
+
+li a {
+    float: right;
+    display: block;
+    color: gray;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    font-family: verdana;
+}
+
+li a:hover {
+    background-color: #2DB69E;
+}
+
+#home{
+    background-image: url("Home.png");
+    background-repeat:no-repeat;
+    background-size:100%;
+    background-position: 0px 10px;
+    width:1500px;
+    height:800px;
+    margin: auto;
+}
+
+#About{
+    background-image: url("About-01.jpg");
+    background-repeat:no-repeat;
+    background-size:100%;
+    width:1500px;
+    height:800px;
+    margin: auto;
+}
+
+#Service{
+    background-image: url("Services-01.jpg");
+    background-repeat:no-repeat;
+    background-size:100%;
+    width:1500px;
+    height:830px;
+    margin: auto;
+}
+
+#ANALYSIS{
+    position: relative;
+    left: 375px;
+    top: 170px;
+}
+
+#PROGRAM{
+    position: relative;
+    left: 330px;
+    top: 170px;
+}
+
+#SEARCH{
+    position: relative;
+    left: 290px;
+    top: 170px;
+}
+
+#RECOMMEND{
+    position: relative;
+    left: -495px;
+    top: 430px;
+}
+
+#RECORD{
+    position: relative;
+    left: -535px;
+    top: 430px;
+}
+
+#CALCULATE{
+    position: relative;
+    left: 865px;
+    top: 140px;
+}
+
+#News{
+    background-image: url("News.jpg");
+    background-repeat:no-repeat;
+    background-size:100%;
+    width:1500px;
+    height:830px;
+    margin: auto;
+}
+
+#FinanceNews{
+    position: relative;
+    left: 100px;
+    top: 700px;
+    width: 13%;
+    height: 13%;
+}
+
+#TechNews{
+    position: relative;
+    left: 180px;
+    top: 690px;
+    width: 130px;
+    height: 130px%;
+}
+
+#EntertainmentNews{
+    position: relative;
+    left: 280px;
+    top: 690px;
+    width: 320px;
+    height: 85px;
+}
+
+#Contact{
+    background-image: url("Contact.png");
+    background-repeat:no-repeat;
+    background-size:100%;
+    width:1500px;
+    height:830px;
+    margin: auto;
+}
+
+#Twitter{
+    position: relative;
+    left: 80px;
+    top: 400px;
+}
+
+#FaceBook{
+    position: relative;
+    left: -120px;
+    top: 400px;
+}
+
+#NameInput{
+    position: relative;
+    left: 830px;
+    top: 120px;
+    width: 25%;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #8BCEBD;
+    padding: 12px 80px 5px 10px;
+    border-radius: 10px;
+}
+
+#EmailInput{
+    position: relative;
+    left: 355px;
+    top: 170px;
+    width: 25%;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #8BCEBD;
+    padding: 12px 80px 5px 10px;
+    border-radius: 10px;
+}
+
+#SubjectInput{
+    position: relative;
+    left: -120px;
+    top: 220px;
+    width: 25%;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #8BCEBD;
+    padding: 12px 80px 5px 10px;
+    border-radius: 10px;
+}
+
+#MessageInput{
+    position: relative;
+    left: 830px;
+    top: 230px;
+    width: 25%;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #8BCEBD;
+    padding: 12px 80px 80px 10px;
+    border-radius: 20px;
+}
+
+::-webkit-input-placeholder{
+    color: white;
+}
+
+#SUBMIT{
+    position: relative;
+    left: 730px;
+    top: 140px;
+}
+
+#RESET{
+    position: relative;
+    left: 530px;
+    top: 138px;
+}
