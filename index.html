@@ -1,75 +1,80 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>FINTECH APP</title>
-		<link href = "app.css" rel = "stylesheet">		
-	</head>
-	<body>
-		<div id = "TOP">
-			<img id = "FINTECH_LOGO" src = "logo-01.jpg" alt = "FINTECH">
-				<aside>
-					<ul>
-  						<li><a href="#Contact">CONTACT</a></li>
-  						<li><a href="#News">NEWS</a></li>
-  						<li><a href="#Service">SERVICE</a></li>
-  						<li><a href="#About">ABOUT</a></li>
-					</ul>
-				</aside>
-		</div>
-		<div id = "home"> </div>
-		<div id = "About"> </div>
-		<div id = "Service">
-			<a href="#ANALYSIS">
-				<img id = "ANALYSIS" src = "201-01.png" alt = "FINTECH">
-			</a>
-			<a href="#PROGRAM">
-				<img id = "PROGRAM" src = "202-01.png" alt = "FINTECH">
-			</a>
-			<a href="#SEARCH">
-				<img id = "SEARCH" src = "203-01.png" alt = "FINTECH">
-			</a>
-			<a href="#RECOMMEND">
-				<img id = "RECOMMEND" src = "204-01.png" alt = "FINTECH">
-			</a>
-			<a href="#RECORD">
-				<img id = "RECORD" src = "205-01.png" alt = "FINTECH">
-			</a>
-			<a href="#CALCULATE">
-				<img id = "CALCULATE" src = "206-01.png" alt = "FINTECH">
-			</a>
-		</div>
-		<div id = "News">
-			<a href="#FinanceNews">
-				<img id = "FinanceNews" src = "FinanceNews.png" alt = "FINTECH">
-			</a>
-			<a href="#TechNews">
-				<img id = "TechNews" src = "Technews.png" alt = "FINTECH">
-			</a>
-			<a href="#EntertainmentNews">
-				<img id = "EntertainmentNews" src = "EntertainmentNews.png" alt = "FINTECH">
-			</a>
-		</div>
-		<div id = "Contact">
-			<a href="https://twitter.com/?lang=zh-tw">
-				<img id = "Twitter" src = "401-01.png" alt = "FINTECH">
-			</a>
-			<a href="https://www.facebook.com/?ref=tn_tnmn">
-				<img id = "FaceBook" src = "402-01.png" alt = "FINTECH">
-			</a>
-			<form>
-  				<input type="text" name="Name" id = "NameInput" placeholder="Name">
-  				<input type="text" name="Email" id = "EmailInput" placeholder="Email">
-  				<input type="text" name="Subject" id = "SubjectInput" placeholder="Subject">
-  				<input type="text" name="Message" id = "MessageInput" placeholder="Message">
-			</form>
-			<a href= "#SUBMIT">
-				<img id = "SUBMIT" src = "304-01.png" alt = "FINTECH">
-			</a>
-			<a href="#RESET">
-				<img id = "RESET" src = "305-01.png" alt = "FINTECH">
-			</a>
-		</div>
-		<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"> </script>
-		<script src ="app.js"> </script>	
-	</body>
+
+<head>
+<title> Hank is handsome!</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+</head>
+
+<body>
+
+<h1>Einstein Bot <br> </h1>
+
+<style type='text/css'>
+	.embeddedServiceHelpButton .helpButton .uiButton {
+		background-color: #005290;
+		font-family: "Arial", sans-serif;
+	}
+	.embeddedServiceHelpButton .helpButton .uiButton:focus {
+		outline: 1px solid #005290;
+	}
+</style>
+
+<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
+<script type='text/javascript'>
+	var initESW = function(gslbBaseURL) {
+		embedded_svc.settings.displayHelpButton = true; //Or false
+		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
+
+		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
+		//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
+
+		//embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
+		//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
+
+		// Settings for Chat
+		//embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
+			// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
+			// Returns a valid button ID.
+		//};
+		//embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
+		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
+		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
+
+		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+		embedded_svc.settings.entryFeature = 'LiveAgent';
+
+		embedded_svc.init(
+			'https://cunning-moose-zraq5-dev-ed.my.salesforce.com',
+			'https://hankishandsome-developer-edition.ap17.force.com/',
+			gslbBaseURL,
+			'00D2x000000qIOu',
+			'Ursa_Major_Solar_Chat_Agents2',
+			{
+				baseLiveAgentContentURL: 'https://c.la2-c2-hnd.salesforceliveagent.com/content',
+				deploymentId: '5722x0000004HzZ',
+				buttonId: '5732x0000004IC7',
+				baseLiveAgentURL: 'https://d.la2-c2-hnd.salesforceliveagent.com/chat',
+				eswLiveAgentDevName: 'Ursa_Major_Solar_Chat_Agents2',
+				isOfflineSupportEnabled: false
+			}
+		);
+	};
+
+	if (!window.embedded_svc) {
+		var s = document.createElement('script');
+		s.setAttribute('src', 'https://cunning-moose-zraq5-dev-ed.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.onload = function() {
+			initESW(null);
+		};
+		document.body.appendChild(s);
+	} else {
+		initESW('https://service.force.com');
+	}
+</script>
+
+</body>
+
 </html>
