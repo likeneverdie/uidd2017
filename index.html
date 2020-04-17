@@ -20,10 +20,18 @@
 	.embeddedServiceHelpButton .helpButton .uiButton:focus {
 		outline: 1px solid #005290;
 	}
+		.embeddedServiceHelpButton .helpButton .uiButton {
+		background-color: #005290;
+		font-family: "Arial", sans-serif;
+	}
+	.embeddedServiceHelpButton .helpButton .uiButton:focus {
+		outline: 1px solid #005290;
+	}
 </style>
 
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
+	
 	var initESW = function(gslbBaseURL) {
 		embedded_svc.settings.displayHelpButton = true; //或 false
 		embedded_svc.settings.language = ''; //例如，輸入 'en' 或 'en-US'
@@ -58,6 +66,56 @@
 				buttonId: '5732x0000004IC7',
 				baseLiveAgentURL: 'https://d.la2-c2-hnd.salesforceliveagent.com/chat',
 				eswLiveAgentDevName: 'Ursa_Major_Solar_Chat_Agents2',
+				isOfflineSupportEnabled: false
+			}
+		);
+	};
+
+	if (!window.embedded_svc) {
+		var s = document.createElement('script');
+		s.setAttribute('src', 'https://cunning-moose-zraq5-dev-ed.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.onload = function() {
+			initESW(null);
+		};
+		document.body.appendChild(s);
+	} else {
+		initESW('https://service.force.com');
+	}
+	
+	var initESW = function(gslbBaseURL) {
+		embedded_svc.settings.displayHelpButton = true; //或 false
+		embedded_svc.settings.language = ''; //例如，輸入 'en' 或 'en-US'
+
+		//embedded_svc.settings.defaultMinimizedText = '...'; //(預設為與專家聊天)
+		//embedded_svc.settings.disabledMinimizedText = '...'; //(預設為工作人員離線)
+
+		//embedded_svc.settings.loadingText = ''; //(預設為載入中)
+		//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(為您的部署設定網域，讓訪客在聊天工作階段期間可瀏覽子網域)
+
+		// 聊天 的設定
+		//embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
+			// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
+			// Returns a valid button ID.
+		//};
+		//embedded_svc.settings.prepopulatedPrechatFields = {}; //設定聊天前表格欄位的自動母群
+		//embedded_svc.settings.fallbackRouting = []; //按鈕識別碼、使用者識別碼或 userId_buttonId 的陣列
+		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(預設為連絡我們)
+
+		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+		embedded_svc.settings.entryFeature = 'LiveAgent';
+
+		embedded_svc.init(
+			'https://cunning-moose-zraq5-dev-ed.my.salesforce.com',
+			'https://hankishandsome-developer-edition.ap17.force.com/',
+			gslbBaseURL,
+			'00D2x000000qIOu',
+			'Live_Agent_Group',
+			{
+				baseLiveAgentContentURL: 'https://c.la2-c2-hnd.salesforceliveagent.com/content',
+				deploymentId: '5722x0000004HzZ',
+				buttonId: '5732x0000004JGz',
+				baseLiveAgentURL: 'https://d.la2-c2-hnd.salesforceliveagent.com/chat',
+				eswLiveAgentDevName: 'Live_Agent_Group',
 				isOfflineSupportEnabled: false
 			}
 		);
